@@ -23,6 +23,7 @@ public class MemberRepositoryTest {
     @Autowired MemberRepository memberRepository;
 
     @Test
+    // Transactional annotation 필수
     @Transactional
     @Rollback(false)
     public void testMember() throws Exception {
