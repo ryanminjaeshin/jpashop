@@ -26,6 +26,7 @@ public class Order {
     @OneToMany(mappedBy = "order") // OrderItem order의해 맵핑
     private List<OrderItem> orderItems = new ArrayList<>();
 
+    @OneToOne
     private Delivery delivery;
 
     private LocalDateTime orderDate;

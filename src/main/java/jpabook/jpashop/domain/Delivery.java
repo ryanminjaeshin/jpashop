@@ -13,6 +13,8 @@ public class Delivery {
     @GeneratedValue
     @Column(name = "delivery_id")
     private Long id;
+
+    @OneToOne
     private Order order;
 
     @Embedded
