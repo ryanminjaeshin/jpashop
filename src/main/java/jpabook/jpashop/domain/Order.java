@@ -23,6 +23,7 @@ public class Order {
     @JoinColumn(name="member_id") // FK = member_id
     private Member member;
 
+    @OneToMany(mappedBy = "order") // OrderItem order의해 맵핑
     private List<OrderItem> orderItems = new ArrayList<>();
 
     private Delivery delivery;
