@@ -25,4 +25,11 @@ public class Category {
             inverseJoinColumns = @JoinColumn(name = "item_id")) // 중간 테이블 mapping; 다대다 mapping을 일대다 다대일로 풀어냄; but 실무에서 안씀.
     private List<Item> items = new ArrayList<>();
 
+    // 양방향 연관관계
+    @ManyToMany
+    @JoinColumn(name = "parent_id")
+    private Category parent;
+
+    @OneToMany(mappedBy = "parent")
+    private List<Category> child = new ArrayList<>();
 }
