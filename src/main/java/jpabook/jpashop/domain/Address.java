@@ -13,4 +13,14 @@ public class Address {
     private String street;
     private String zipcode;
 
+    // make it immutable
+    protected Address() {
+    }
+
+    public Address(String city, String street, String zipcode) {
+        this.city = city;
+        this.street = street;
+        this.zipcode = zipcode;
+    }
+
 }
