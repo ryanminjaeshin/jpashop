@@ -26,7 +26,7 @@ public class Order {
     @OneToMany(mappedBy = "order") // OrderItem order의해 맵핑
     private List<OrderItem> orderItems = new ArrayList<>();
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
